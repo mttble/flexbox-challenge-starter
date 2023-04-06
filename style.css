@@ -11,6 +11,27 @@ body {
     flex-direction: column;
 }
 
+.outline-button{
+    text-decoration: none;
+    font-family:lato, Arial, Helvetica, sans-serif;
+    font-size: 1.5rem;
+    padding: 0.5rem 1.25rem;
+    border: 1px solid white;
+}
+
+.white{
+    border: 1px solid white;
+    color:white;
+    text-decoration: none;
+    padding: 1rem;
+}
+.lilac{
+    border: 1px solid #8980c2;
+    color:#8980c2;
+    text-decoration: none;
+    padding: 1rem;
+    margin: 1rem;
+}
 /* header component */
 
 header{
@@ -59,17 +80,66 @@ nav a {
     margin:1rem 0;
 }
 
-#hero a{
-    text-decoration: none;
-    font-family:lato, Arial, Helvetica, sans-serif;
-    font-size: 1.5rem;
-    padding: 0.5rem 1.25rem;
-    border: 1px solid white;
-}
 
 #hero img{
     width: 66%;
     border-radius:50%;
 }
 
+/* Main Content */
 
+main {
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    font-family:'bree-serif','Times New Roman', times, serif;
+}
+
+main h2 {
+    margin: 1rem 0 0;
+}
+
+main article{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 1rem 2rem;
+}
+
+main article img{
+    width: 75%;
+    border-radius: 50%;
+    border:3px solid #8980c2;
+}
+
+main article h3{
+    margin: 1rem 0;
+    font-weight: normal;
+    font-size: 1.5rem;
+}
+
+main article p{
+    font-size:1.1rem;
+}
+
+/* Social links component */
+#social-links {
+    background:#8980c2;
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    font-family:'bree-serif','Times New Roman', times, serif;
+    padding: 1rem;
+}
+
+#social-links p{
+    font-family:'bree-serif','Times New Roman', times, serif;
+    color: white;
+    font-size: 1rem;
+    margin-bottom: 1rem;
+}
+#social-links > div{
+    width: 100%;
+    display:flex;
+    justify-content: space-around;
+}
