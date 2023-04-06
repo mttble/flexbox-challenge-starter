@@ -11,3 +11,65 @@ body {
     flex-direction: column;
 }
 
+/* header component */
+
+header{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 1rem 0 1.5rem;
+}
+#brand {
+    width: 50%;
+    margin-bottom: 1rem;
+}
+
+nav {
+    display:flex;
+    justify-content: space-around;
+    width:100%;
+}
+
+nav a {
+    font-family:lato, Arial, Helvetica, sans-serif;
+    text-decoration: none;
+    font-size: 1.25rem;
+    color:#888;
+}
+
+/* hero component */
+
+#hero {
+    display:flex;
+    flex-direction: column;
+    background:#8980c2 url(images/zebra-hero.jpg) 33% no-repeat;
+    background-size: cover;
+    align-items: center;
+    padding: 2rem 0;
+}
+
+#hero h1, #hero a {
+    color: white;
+}
+
+#hero h1 {
+    font-family:'bree-serif','Times New Roman', times, serif;
+    font-size: 2.5rem;
+    font-weight: normal;
+    margin:1rem 0;
+}
+
+#hero a{
+    text-decoration: none;
+    font-family:lato, Arial, Helvetica, sans-serif;
+    font-size: 1.5rem;
+    padding: 0.5rem 1.25rem;
+    border: 1px solid white;
+}
+
+#hero img{
+    width: 66%;
+    border-radius:50%;
+}
+
+
