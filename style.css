@@ -62,12 +62,33 @@ nav a {
 
 #hero {
     display:flex;
+    position: relative;
     flex-direction: column;
-    background:#8980c2 url(images/zebra-hero.jpg) 33% no-repeat;
+    /* last 2 digits is the alpha blend */
+    background:#00000030 url(images/zebra-hero.jpg) 33% no-repeat;
+    /* mutiply allows the blend */
+    background-blend-mode: multiply;
     background-size: cover;
     align-items: center;
     padding: 2rem 0;
 }
+/* make background darker - overlay */
+/* #hero:after{
+    content: "";
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 0;
+    background: rgb(0, 0, 0,0.2);
+}
+#hero *{
+    position: relative;
+    z-index: 1;
+} */
+/* above is make background darker */
 
 #hero h1, #hero a {
     color: white;
@@ -138,8 +159,78 @@ main article p{
     font-size: 1rem;
     margin-bottom: 1rem;
 }
-#social-links > div{
+#social-links nav{
     width: 100%;
     display:flex;
-    justify-content: space-around;
+    justify-content: space-between;
+}
+/* Footer component */
+footer {
+    text-align: center;
+    padding: 1.5rem;
+}
+
+footer p{
+    font-family:'bree-serif','Times New Roman', times, serif;
+    font-size: 1.25rem;
+}
+
+/* Tablet styles */
+@media only screen and (min-width: 550px) {
+    header {
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-around;
+        margin-top: 0.5rem;
+    }
+    #brand {
+        margin-left: 1rem;
+        width: 25%;
+        margin-bottom: 0;
+        /* margin-bottom: 0.5rem; */
+    }
+}
+
+@media only screen and (min-width: 800px) {
+    #hero img{
+        width: 50%;
+    }
+}
+@media only screen and (min-width: 700px) {
+    main {
+        flex-direction: row;
+        flex-wrap: wrap;
+        margin-bottom: 0.5rem;
+    }
+    main h2 {
+        width: 100%;
+        text-align: center;
+    }
+    main article {
+        width:33.33%;
+    }
+    main article .outline-button{
+        font-size: 0.9rem;
+        white-space: nowrap;
+    }
+}
+
+/* Desktop styles */
+@media only screen and (min-width: 1000px) {
+    header {
+        padding: 0.5 0 1;
+        justify-content: space-between;
+    }
+    #brand {
+        width:7%;
+    }
+    header nav{
+        width: auto;
+    }
+    header nav a{
+        margin-right:3rem;
+    }
+    #hero img{
+        width: 20%;
+    }
 }
